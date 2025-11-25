@@ -19,7 +19,6 @@ SSH Dynamic Port Forwarding (SOCKS-проксі) + Reverse Port Forwarding + л�
 ## Як запускати (3 Git Bash вікна)
 
 ### Вікно №1 — запуск EC2 + SOCKS proxy
-cd /c/IXT/hometask7
 bash run-instance.sh
 
 ssh -i "IXT.pem" -D 8888 ubuntu@<EC2-IP>  
@@ -34,10 +33,8 @@ python -m http.server 8000
 https://whatismyipaddress.com
 
 ### Вікно №3 — reverse SSH-тунель
-cd /c/IXT/hometask7
 ssh -i "IXT.pem" -R 9999:localhost:8000 ubuntu@<EC2-IP>  
 # EC2 зможе бачити локальний сервер на порті 9999
-
 
 ## Перевірка у браузері (Firefox)
 
